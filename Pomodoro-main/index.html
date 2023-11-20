@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Temporizador Pomodoro</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="section">
+    <h2>Pomodoro Online</h2>
+    <p>Optimize your focus time.</p>
+  </div>
+
+  <div class="timer-container">
+    <!-- Adicionando checkboxes -->
+    <div class="task-checkboxes">
+      <label>
+        <input type="checkbox" class="task-checkbox" />
+        <span contenteditable="true">Task 1</span>
+      </label>
+
+      <label>
+        <input type="checkbox" class="task-checkbox" />
+        <span contenteditable="true">Task 2</span>
+      </label>
+
+      <label>
+        <input type="checkbox" class="task-checkbox" />
+        <span contenteditable="true">Task 3</span>
+      </label>
+
+      <label>
+        <input type="checkbox" class="task-checkbox" />
+        <span contenteditable="true">Task 4</span>
+      </label>
+
+      <label>
+        <input type="checkbox" class="task-checkbox" />
+        <span contenteditable="true">Task 5</span>
+      </label>
+    </div>
+
+    <!-- Adicionando timers -->
+    <div class="timer">
+      <label for="Working-time">Work Time</label>
+      <input type="text" id="Working-time" value="25:00" oninput="formatTime(this)">
+      <br>
+      <button id="Working-start" onclick="startTimer('Working')">Start</button>
+      <button id="Working-stop" onclick="stopTimer('Working')">Stop</button>
+    </div>
+    <div class="timer">
+      <label for="Short Break-time">Short Break</label>
+      <input type="text" id="Short Break-time" value="05:00" oninput="formatTime(this)">
+      <br>
+      <button id="Short Break-start" onclick="startTimer('Short Break')">Start</button>
+      <button id="Short Break-stop" onclick="stopTimer('Short Break')">Stop</button>
+    </div>
+    <div class="timer">
+      <label for="Long Break-time">Long Break</label>
+      <input type="text" id="Long Break-time" value="15:00" oninput="formatTime(this)">
+      <br>
+      <button id="Long Break-start" onclick="startTimer('Long Break')">Start</button>
+      <button id="Long Break-stop" onclick="stopTimer('Long Break')">Stop</button>
+    </div>
+    <div class="timer current-timer">
+      <label>Current Timer: </label>
+      <span id="current-timer-display"></span>
+    </div>
+
+    <!-- Adicionando o iframe do YouTube -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FxJ3zPUU6Y4" frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
